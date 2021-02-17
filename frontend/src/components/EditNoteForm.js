@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, FormGroup, Input, Card, CardTitle, CardText } from 'reactstrap';
+import { Form, FormGroup, Input, Card, CardTitle } from 'reactstrap';
 
 const EditNoteForm = ({note, handleChange }) => (
   <Form>

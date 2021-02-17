@@ -55,11 +55,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+"""
 CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
-)
-
+    ' https://127.0.0.1:3000',
+)"""
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+]
 ROOT_URLCONF = 'notes_project.urls'
 
 TEMPLATES = [
@@ -84,10 +87,22 @@ WSGI_APPLICATION = 'notes_project.wsgi.application' #http
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'notes_db',
+        'HOST': 'postgres',
+        'PORT': '5432',
+        'USER': 'postgres',
+        'PASSWORD': '0000',
     }
 }
 

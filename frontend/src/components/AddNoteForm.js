@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class AddNoteForm extends React.Component {
@@ -37,7 +37,11 @@ class AddNoteForm extends React.Component {
         <Form onSubmit={this.handleSubmit}>
           <FormGroup>
             <Label>Title</Label>
-            <Input onChange={this.handleChange} name="title" type="text" value={this.state.title}/>
+            <Input
+                onChange={this.handleChange}
+                name="title"
+                type="text"
+                value={this.state.title}/>
           </FormGroup>
           <FormGroup>
             <Label>Content</Label>

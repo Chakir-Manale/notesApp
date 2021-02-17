@@ -4,7 +4,7 @@ import { Button, Container, Row, Col } from 'reactstrap';
 import ListNotes from './components/ListNotes';
 import AddNoteForm from './components/AddNoteForm';
 
-import { fetchNotes, fetchNote, updateNote, addNote } from './api';
+import { fetchNotes, fetchNote, addNote } from './api';
 import Websocket from 'react-websocket';
 import EditNoteForm from './components/EditNoteForm';
 
